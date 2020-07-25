@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  app:
+    image: possgress:0.1
+
+  db:
+    image: db:0.1
+    environment:
+      POSTGRES_PASSWORD: pass
+    depends_on:
+      - app
+    # ports:
+    #   - "5432:5432"
